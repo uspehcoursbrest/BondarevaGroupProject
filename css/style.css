@@ -1,20 +1,225 @@
-*{box-sizing: border-box;
+* {
+    box-sizing: border-box;
 
 
-
-body{
-margin:0 auto; font-family:"Open Sans";
+body {
+    margin: 0 auto;
+    font-family: "Open Sans";
 }
 
-h1. h2, h3, h4, h5, p {margin:0;
+h1. h2, h3, h4, h5, p {
+    margin: 0;
 }
 
-ul{
-    margin:0;
-    padding:0;
+ul {
+    margin: 0;
+    padding: 0;
     list-style-type: none;
 }
-.container{
-width:1010 px;margin: 0;
-padding:0 15px;
+
+.container {
+    width: 1010px;
+    margin: 0;
+    padding: 0 15px;
 }
+
+header .login {
+    font-size: 13px;
+    line-height: 20px;
+    color: #0069b4;
+}
+
+header.menu a {
+    font-size: 13px;
+    line-height: 28px;
+    color: #333333;
+}
+
+header .phone {
+    font-size: 20px;
+    line-height: 20px;
+    color: #333333;
+    text-decoration: none;
+}
+
+header .callback {
+    font-size: 12px;
+    line-height: 16px;
+    text-decoration: none;
+    color: #0069b4;
+    border-bottom: 1px dashed #0069b4;
+}
+
+header p.timing {
+    font-size: 13px;
+    line-height: 19px;
+    color: #999999;
+}
+
+header .basket span {
+color: #1a9547
+}
+
+header [class*="icon"] {color: #caebd4
+}
+
+header .icon-user {
+    font-size: 18px;
+}
+
+header .icon-phone {
+    font-size: 20px;
+}
+
+.advantages .item span {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 17px;
+    color: #333333;
+}
+
+.advantages .item p {
+    font-size: 12px;
+    line-height: 14px;
+    color: #666666;
+}
+
+.subscribe {
+    background-color: #1a9547;
+}
+
+.subscribe label {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.subscribe input {
+    font-size: 13px;
+    border: none;
+    padding: 10px;
+    line-height: 37px;
+    color: #999999;
+}
+
+.subscribe button {
+    font-size: 13px;
+    border: none;
+    line-height: 37px;
+    text-align: center;
+    color:#ffffff ;
+    width: 185px;
+    background-color: #64b94a;
+}
+
+.subscribe .wrap {
+    font-size: 12px;
+    color: rgba(255.255.255.0.5);
+}
+
+.filter li {
+    font-size: 13px;
+    line-height: 16px;
+    border-bottom: 1px dashed #666666;
+}
+
+.filter li a {
+text-decoration: none
+    color:#666666 ;
+}
+
+.card .title {
+    font-size: 15px;
+    line-height: 22px;
+    color: #333333;
+}
+
+.card a {
+    font-size: 15px;
+    line-height: 22px;
+    color: #0069b4;
+}
+
+.card .price {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    color: #666666;
+    vertical-align: top;
+}
+
+.card .price .old {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 26px;
+    text-decoration: line-through;
+    color: #666666;
+}
+
+.card button {
+font-size: 14px;
+    line-height: 32px;
+    text-align: center;
+    color: #ffffff;
+    width: 100px;
+    background-color: #ff7200;
+    border: none
+}
+
+.socials h1 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    text-align: center;
+    color: #666666;
+}
+
+.tabs li a {
+    font-size: 14px;
+    text-decoration:none;
+    line-height: 45px;
+    color: #999999;
+}
+
+.socItem:first-child
+.socItem:last-child {
+width: 290px;
+    height: 400px;
+}
+
+wiggetItem:nth-child(2) {
+width: 350px;
+    height: 400px;
+}
+
+.socItemsocItem
+backround-size:cover;
+backround-repeat: no-repet;
+backround-position: center;
+
+
+.info tab .content {
+    font-size: 12px;
+    line-height: 18px;
+    color: #333333;
+}
+
+.info .title {
+text-transform: uppercase;
+}
+
+footer {
+    font-size: 13px;
+    line-height: 22px;
+    color: #ffffff;
+    background-color: 62b749;
+}
+
+footer a {
+text-decoration:none
+    color:#ffffff ;
+}
+
+footer a.socLinks {
+    font-size: 21px;
+}
+footer
