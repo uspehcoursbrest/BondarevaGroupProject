@@ -1,13 +1,13 @@
 * {
     box-sizing: border-box;
-
+}
 
 body {
     margin: 0 auto;
     font-family: "Open Sans";
 }
 
-h1. h2, h3, h4, h5, p {
+h1, h2, h3, h4, h5, h6, p {
     margin: 0;
 }
 
@@ -19,7 +19,7 @@ ul {
 
 .container {
     width: 1010px;
-    margin: 0;
+    margin: 0 auto;
     padding: 0 15px;
 }
 
@@ -29,7 +29,7 @@ header .login {
     color: #0069b4;
 }
 
-header.menu a {
+header .menu a {
     font-size: 13px;
     line-height: 28px;
     color: #333333;
@@ -50,17 +50,29 @@ header .callback {
     border-bottom: 1px dashed #0069b4;
 }
 
-header p.timing {
+header .timing {
     font-size: 13px;
     line-height: 19px;
     color: #999999;
 }
 
-header .basket span {
-color: #1a9547
+header .basket {
+    font-size: 13px;
+    line-height: 22px;
+    color: #333333;
+    text-decoration: none;
+    display: inline-block;
+    padding-left: 28px;
+    background-repeat: no-repeat;
+    background-position: left center;
 }
 
-header [class*="icon"] {color: #caebd4
+header .basket span {
+    color: #1a9547;
+}
+
+header [class*="icon"] {
+    color: #caebd4;
 }
 
 header .icon-user {
@@ -85,7 +97,7 @@ header .icon-phone {
 }
 
 .subscribe {
-    background-color: #1a9547;
+    background-color: #64ba4a;
 }
 
 .subscribe label {
@@ -95,25 +107,25 @@ header .icon-phone {
 
 .subscribe input {
     font-size: 13px;
-    border: none;
-    padding: 10px;
     line-height: 37px;
     color: #999999;
+    border: none;
+    padding-left: 10px;
 }
 
 .subscribe button {
     font-size: 13px;
-    border: none;
     line-height: 37px;
     text-align: center;
-    color:#ffffff ;
+    color: #ffffff;
     width: 185px;
-    background-color: #64b94a;
+    background-color: #259c47;
+    border: none;
 }
 
-.subscribe .wrap {
+.subscribe .wrap span {
     font-size: 12px;
-    color: rgba(255.255.255.0.5);
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .filter li {
@@ -123,11 +135,19 @@ header .icon-phone {
 }
 
 .filter li a {
-text-decoration: none
-    color:#666666 ;
+    text-decoration: none;
+    color: #666666;
 }
 
-.card .title {
+.card .img {
+    width: 220px;
+    height: 220px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.card . title {
     font-size: 15px;
     line-height: 22px;
     color: #333333;
@@ -143,7 +163,7 @@ text-decoration: none
     font-size: 20px;
     font-weight: 600;
     line-height: 30px;
-    color: #666666;
+    color: #333333;
     vertical-align: top;
 }
 
@@ -153,19 +173,20 @@ text-decoration: none
     line-height: 26px;
     text-decoration: line-through;
     color: #666666;
+    vertical-align: top;
 }
 
 .card button {
-font-size: 14px;
+    font-size: 14px;
     line-height: 32px;
     text-align: center;
     color: #ffffff;
-    width: 100px;
     background-color: #ff7200;
-    border: none
+    border: none;
+    width: 100px;
 }
 
-.socials h1 {
+.widgets h1 {
     font-size: 18px;
     font-weight: 600;
     line-height: 22px;
@@ -173,53 +194,54 @@ font-size: 14px;
     color: #666666;
 }
 
+.widgets .item:first-child,
+.widgets .item:last-child {
+    width: 290px;
+    height: 400px;
+}
+
+.widgets .item:nth-child(2) {
+    width: 350px;
+    height: 400px;
+    margin: 0 25px;
+}
+
+.widgets .item {
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .tabs li a {
     font-size: 14px;
-    text-decoration:none;
+    text-decoration: none;
     line-height: 45px;
     color: #999999;
 }
 
-.socItem:first-child
-.socItem:last-child {
-width: 290px;
-    height: 400px;
-}
-
-wiggetItem:nth-child(2) {
-width: 350px;
-    height: 400px;
-}
-
-.socItemsocItem
-backround-size:cover;
-backround-repeat: no-repet;
-backround-position: center;
-
-
-.info tab .content {
+.tabContent {
     font-size: 12px;
     line-height: 18px;
     color: #333333;
 }
 
 .info .title {
-text-transform: uppercase;
+    text-transform: uppercase;
 }
 
 footer {
     font-size: 13px;
     line-height: 22px;
     color: #ffffff;
-    background-color: 62b749;
+    background-color: #64ba4a;
 }
 
 footer a {
-text-decoration:none
-    color:#ffffff ;
+    text-decoration: none;
+    color: #ffffff;
 }
 
-footer a.socLinks {
+footer .socLinks a {
     font-size: 21px;
 }
-footer
