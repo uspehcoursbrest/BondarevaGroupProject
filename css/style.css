@@ -245,3 +245,78 @@ footer a {
 footer .socLinks a {
     font-size: 21px;
 }
+
+.caption {
+    font-size: 12px;
+    line-height: 22px;
+    color: #999999;
+
+}
+
+.caption a {
+    color: #999999;
+    text-decoration: none;
+}
+
+.form>span {
+    font-size: 13px;
+    line-height: 22px;
+    color: #333333;
+}
+
+.form label {
+    font-size: 13px;
+    line-height: 22px;
+    font-style: italic;
+    color: #666666;
+}
+
+.form .logo label {
+    font-size: 13px;
+    font-style: normal;
+    color: #333333;
+}
+
+.logo span {
+    font-size: 11px;
+    color: #999999;
+}
+
+.logo label[for*="logo"] {
+    font-size: 13px;
+    line-height: 22px;
+    color: #666666;
+}
+
+.form button {
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #ff7200;
+    border: none;
+    width: 130px;
+}
+
+.product span {
+    font-size: 25px;
+    line-height: 22px;
+    font-weight: 600;
+    color: #333333;
+}
+
+.product p {
+    font-size: 13px;
+    line-height: 30px;
+    color: #333333;
+}
+
+.product a {
+    font-size: 14px;
+    line-height: 22px;
+    color: #ffffff;
+    background-color: #64ba4a;
+    text-decoration: none;
+    text-align: center;
+    padding: 5px 20px;
+}
