@@ -23,7 +23,13 @@ ul {
     padding: 0 15px;
 }
 
-header .login {
+.clear::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+header .login{
     font-size: 13px;
     line-height: 20px;
     color: #0069b4;
@@ -33,6 +39,11 @@ header .menu a {
     font-size: 13px;
     line-height: 28px;
     color: #333333;
+}
+
+.menu li {
+    display: inline-block;
+    margin-right: 20px;
 }
 
 header .phone {
@@ -83,11 +94,22 @@ header .icon-phone {
     font-size: 20px;
 }
 
+.content .sale {
+    width: 304px;
+    height: 360px;
+}
+
+.content .slider {
+    width: 640px;
+    height: 360px;
+}
+
 .advantages .item span {
     font-size: 14px;
     font-weight: bold;
     line-height: 17px;
     color: #333333;
+    display: block;
 }
 
 .advantages .item p {
@@ -96,8 +118,21 @@ header .icon-phone {
     color: #666666;
 }
 
+.advantages {
+    width: calc(100% - 320px);
+    float: left;
+}
+
+.advantages .item {
+    width: 25%;
+    float: left;
+}
+
 .subscribe {
     background-color: #64ba4a;
+    width: 320px;
+    float: left;
+    padding: 20px;
 }
 
 .subscribe label {
@@ -111,6 +146,7 @@ header .icon-phone {
     color: #999999;
     border: none;
     padding-left: 10px;
+    width: 100%;
 }
 
 .subscribe button {
@@ -118,20 +154,26 @@ header .icon-phone {
     line-height: 37px;
     text-align: center;
     color: #ffffff;
+    border: none;
     width: 185px;
     background-color: #259c47;
-    border: none;
 }
 
 .subscribe .wrap span {
     font-size: 12px;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255,255,255,0.5);
+}
+
+.advSub + .catalog {
+    margin-top: 30px;
 }
 
 .filter li {
     font-size: 13px;
     line-height: 16px;
     border-bottom: 1px dashed #666666;
+    display: inline-block;
+    margin-right: 20px;
 }
 
 .filter li a {
@@ -139,18 +181,29 @@ header .icon-phone {
     color: #666666;
 }
 
-.card .img {
-    width: 220px;
-    height: 220px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+.filter + .cards {
+    margin-top: 30px;
 }
 
-.card . title {
+.card .title {
     font-size: 15px;
     line-height: 22px;
     color: #333333;
+}
+
+.card .img {
+    width: 220px;
+    height: 220px;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.card .small {
+    width: 50px;
+    height: 50px;
 }
 
 .card a {
@@ -164,7 +217,6 @@ header .icon-phone {
     font-weight: 600;
     line-height: 30px;
     color: #333333;
-    vertical-align: top;
 }
 
 .card .price .old {
@@ -181,9 +233,9 @@ header .icon-phone {
     line-height: 32px;
     text-align: center;
     color: #ffffff;
+    width: 100px;
     background-color: #ff7200;
     border: none;
-    width: 100px;
 }
 
 .widgets h1 {
@@ -203,7 +255,6 @@ header .icon-phone {
 .widgets .item:nth-child(2) {
     width: 350px;
     height: 400px;
-    margin: 0 25px;
 }
 
 .widgets .item {
@@ -220,7 +271,12 @@ header .icon-phone {
     color: #999999;
 }
 
-.tabContent {
+.tabs li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.info .tabContent {
     font-size: 12px;
     line-height: 18px;
     color: #333333;
@@ -242,60 +298,117 @@ footer a {
     color: #ffffff;
 }
 
-footer .socLinks a {
+footer .soclincs a {
     font-size: 21px;
 }
 
-.caption {
+.footmenu {
+    width: 50%;
+    float: left;
+}
+
+.footmenu > li {
+    width: 50%;
+    float: left;
+}
+
+.footContacts {
+    width: 25%;
+    float: left;
+}
+
+.copyright {
+    width: 25%;
+    float: left;
+}
+
+header .menu  .corp {
+    color: #ff7200;
+}
+
+.content .caption {
     font-size: 12px;
     line-height: 22px;
     color: #999999;
-
 }
 
-.caption a {
-    color: #999999;
+.content .caption a {
     text-decoration: none;
+    color: #999999;
 }
 
-.form>span {
+.corpClients .form>span {
     font-size: 13px;
     line-height: 22px;
     color: #333333;
 }
 
-.form label {
+.corpClients form {
+    background-color: #f9f9f9;
+}
+
+.corpClients form label {
     font-size: 13px;
     line-height: 22px;
     font-style: italic;
     color: #666666;
 }
 
-.form .logo label {
+.corpClients .logo>label {
     font-size: 13px;
+    line-height: normal;
     font-style: normal;
     color: #333333;
 }
 
-.logo span {
+.corpClients .logo span {
     font-size: 11px;
     color: #999999;
 }
 
-.logo label[for*="logo"] {
+.corpClients .logo li label {
     font-size: 13px;
     line-height: 22px;
+    font-style: normal;
     color: #666666;
 }
 
-.form button {
+.corpClients .input label {
+    font-size: 13px;
+    line-height: 22px;
+    font-style: normal;
+    text-decoration: underline;
+    color: #229647;
+}
+
+.corpClients .input span {
+    font-size: 13px;
+    color: #999999;
+}
+
+.corpClients .figure option {
+    font-size: 13px;
+    line-height: 22px;
+    color: #333333;
+}
+
+.corpClients .date input {
+    font-size: 13px;
+    line-height: 22px;
+    color: #333333;
+}
+
+.corpClients .info textarea {
+    width: 280px;
+    height: 125px;
+}
+
+.corpClients form button {
     font-size: 14px;
     line-height: 22px;
-    text-align: center;
     color: #ffffff;
     background-color: #ff7200;
     border: none;
-    width: 130px;
 }
 
 .product span {
@@ -317,8 +430,6 @@ footer .socLinks a {
     color: #ffffff;
     background-color: #64ba4a;
     text-decoration: none;
-    text-align: center;
-    padding: 5px 20px;
 }
 
 .content .bredcrumbs li,
@@ -360,3 +471,100 @@ footer .socLinks a {
     line-height: 22px;
     color: #0069b4;
 }
+
+.content .breadcrumbs li,
+.content .breadcrumbs li a {
+    font-size: 12px;
+    line-height: 22px;
+    text-decoration: none;
+    color: #999999;
+}
+
+.container .checkout h1 {
+    font-size: 25px;
+    line-height: 22px;
+    font-weight: 600;
+    color: #333333;
+}
+
+.content .citySelection label {
+    font-size: 13px;
+    line-height: 22px;
+    color: #666666;
+    font-style: italic;
+}
+
+.content .citySelection select* {
+    font-size: 13px;
+    line-height: 22px;
+    color: #666666;
+}
+
+.content h2 {
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 600;
+    color: #333333;
+}
+
+.delivery ul li label* {
+    font-size: 13px;
+    line-height: 19px;
+    color: #333333;
+}
+
+.delivery ul p {
+    font-size: 12px;
+    line-height: 18px;
+    color: #666666;
+}
+
+.delivery ul .orange {
+    color: #f26522;
+}
+
+.content .deliveryAddress label {
+    font-size: 13px;
+    line-height: 22px;
+    color: #666666;
+    font-style: italic;
+}
+
+.content .deliveryAddress span {
+    color: #ed1c24;
+}
+
+.content .paymentMeth label {
+    font-size: 13px;
+    line-height: 19px;
+    color: #333333;
+    font-style: normal;
+}
+
+.content .paymentMeth p {
+    font-size: 12px;
+    line-height: 18px;
+    color: #666666;
+}
+
+.content .yourDate label{
+    font-size: 13px;
+    line-height: 22px;
+    color: #666666;
+    font-style: italic;
+}
+
+.content .yourDate span {
+    color: #ed1c24;
+}
+
+.content .yourDate .dateButton input {
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    color: #ffffff;
+    width: 185px;
+    background-color: #ea5b0c;
+    border: none;
+}
+
