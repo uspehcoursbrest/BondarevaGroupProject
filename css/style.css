@@ -1,8 +1,7 @@
 *,
 *::before,
-*::after {
+*::after{
     box-sizing: border-box;
-
 }
 
 body {
@@ -25,23 +24,20 @@ ul {
     margin: 0 auto;
     padding: 0 15px;
 }
-
 .clear::after {
     content: "";
     display: block;
     clear: both;
 }
-
 .invisLink {
     position: relative;
     z-index: 1;
 }
-
-.invisLink > a {
+.invisLink>a {
     display: block;
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 0px;
+    top: 0px;
     width: 100%;
     height: 100%;
     z-index: 7;
@@ -49,56 +45,30 @@ ul {
     text-indent: 200%;
     white-space: nowrap;
 }
-
 header {
     padding-top: 27px;
 }
-
-.headWrap {
-    display: table;
-    width: 100%;
-}
-
-.headWrap > div {
-    display: table-cell;
-    width: 33.3333%;
-    vertical-align: top;
-}
-
-.headWrap .logo {
-    text-align: center;
-}
-
-.headWrap .right {
-    text-align: right;
-}
-
-
-header .login{
+header .login {
     font-size: 13px;
     line-height: 20px;
     color: #0069b4;
 }
-
 header .menu a {
     font-size: 13px;
-    line-height: 28px;
+    line-height: 25px;
     color: #333333;
 }
-
-.menu li {
+header .menu li {
     display: inline-block;
     margin-right: 20px;
 }
-
 header .phone {
     font-size: 20px;
     line-height: 20px;
     color: #333333;
     text-decoration: none;
 }
-
-header .callback {
+header .calBack {
     font-size: 12px;
     line-height: 16px;
     text-decoration: none;
@@ -107,14 +77,12 @@ header .callback {
     display: table;
     margin-left: auto;
 }
-
 header .timing {
     font-size: 13px;
     line-height: 19px;
     color: #999999;
 }
-
-header .basket {
+header .basked {
     font-size: 13px;
     line-height: 22px;
     color: #333333;
@@ -124,50 +92,46 @@ header .basket {
     background-repeat: no-repeat;
     background-position: left center;
 }
-
-header .basket span {
+header .basked span {
     color: #1a9547;
 }
-
 header [class*="icon"] {
     color: #caebd4;
 }
-
 header .icon-user {
     font-size: 18px;
 }
-
 header .icon-phone {
     font-size: 20px;
 }
-
-
+.headWrap {
+    display: table;
+    width: 100%;
+}
+.headWrap>div {
+    display: table-cell;
+    width: 33.3333%;
+    vertical-align: top;
+}
+.headWrap .logo {
+    text-align: center;
+}
+.headWrap .right {
+    text-align: right;
+}
 .banner {
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
 }
-
 .banner .sale {
     width: 305px;
     height: 360px;
 }
-
 .banner .slider {
     width: 640px;
     height: 360px;
 }
-
-.content .sale {
-    width: 304px;
-    height: 360px;
-}
-
-.content .slider {
-    width: 640px;
-    height: 360px;
-}
-
 .advantages .item span {
     font-size: 14px;
     font-weight: bold;
@@ -175,35 +139,29 @@ header .icon-phone {
     color: #333333;
     display: block;
 }
-
 .advantages .item p {
     font-size: 12px;
     line-height: 14px;
     color: #666666;
 }
-
 .advantages {
     width: calc(100% - 320px);
     float: left;
 }
-
 .advantages .item {
     width: 25%;
     float: left;
 }
-
 .subscribe {
-    background-color: #64ba4a;
+    background-color: #63b849;
     width: 320px;
     float: left;
     padding: 20px;
 }
-
 .subscribe label {
     font-size: 16px;
     color: #ffffff;
 }
-
 .subscribe input {
     font-size: 13px;
     line-height: 37px;
@@ -212,36 +170,34 @@ header .icon-phone {
     padding-left: 10px;
     width: 100%;
 }
-
 .subscribe button {
     font-size: 13px;
     line-height: 37px;
     text-align: center;
     color: #ffffff;
-    border: none;
     width: 185px;
     background-color: #259c47;
+    border: none;
     display: table-cell;
-    vertical-align:  middle;
+    vertical-align: middle;
 }
-
 .subscribe .wrap span {
-    font-size: 12px;
-    color: rgba(255,255,255,0.5);
     display: table-cell;
     vertical-align: middle;
     padding-left: 25px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
 }
-
 .subscribe .wrap {
     display: table;
     width: 100%;
 }
-
-.advSub + .catalog {
+.advSab + .catalog  {
     margin-top: 30px;
 }
-
+.filter + .cards {
+    margin-top: 30px;
+}
 .filter li {
     font-size: 13px;
     line-height: 16px;
@@ -249,27 +205,19 @@ header .icon-phone {
     display: inline-block;
     margin-right: 20px;
 }
-
 .filter li a {
     text-decoration: none;
     color: #666666;
 }
-
-.filter + .cards {
-    margin-top: 30px;
-}
-
 .cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
 }
-
 .card {
     position: relative;
     border-bottom: 1px solid #e4e4e4;
 }
-
 .status {
     position: absolute;
     display: block;
@@ -280,41 +228,9 @@ header .icon-phone {
     line-height: 20px;
     text-align: center;
 }
-
 .status.hit {
     background-color: #6eddcc;
 }
-
-.status.discount {
-    background-color: #ffed03;
-}
-
-.status.new {
-    background-color: #78ec71;
-}
-
-.card .content {
-    position: relative;
-    min-height: 110px;
-    padding-top: 15px;
-}
-
-.card .content .buy {
-    position: absolute;
-    width: 100%;
-    left: 0px;
-    bottom: 10px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.card .title {
-    font-size: 15px;
-    line-height: 22px;
-    color: #333333;
-    display: block;
-}
-
 .card .img {
     height: 220px;
     -webkit-background-size: cover;
@@ -322,25 +238,38 @@ header .icon-phone {
     background-repeat: no-repeat;
     background-position: center;
 }
-
-.card .small {
-    width: 50px;
-    height: 50px;
+.card .content .bay {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    bottom: 10px;
+    display: flex;
+    justify-content: space-between;
 }
+.card .content {
+    min-height: 110px;
+    position: relative;
+    padding-top: 20px;
 
+}
+.card .title {
+    font-size: 15px;
+    line-height: 22px;
+    color: #333333;
+    display: block;
+}
 .card a {
     font-size: 15px;
     line-height: 22px;
     color: #0069b4;
 }
-
 .card .price {
     font-size: 20px;
     font-weight: 600;
     line-height: 30px;
     color: #333333;
+    vertical-align: top;
 }
-
 .card .price .old {
     font-size: 14px;
     font-weight: normal;
@@ -349,7 +278,6 @@ header .icon-phone {
     color: #666666;
     vertical-align: top;
 }
-
 .card button {
     font-size: 14px;
     line-height: 32px;
@@ -359,32 +287,26 @@ header .icon-phone {
     background-color: #ff7200;
     border: none;
 }
-
 .widgets .wrapper {
     display: flex;
     justify-content: space-between;
-
 }
-
 .widgets h1 {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     line-height: 22px;
     text-align: center;
     color: #666666;
 }
-
 .widgets .item:first-child,
 .widgets .item:last-child {
     width: 290px;
     height: 400px;
 }
-
-.widgets .item:nth-child(2) {
+.widgets .item:nth-child(2){
     width: 350px;
     height: 400px;
 }
-
 .widgets .item {
     -webkit-background-size: cover;
     background-size: cover;
@@ -398,41 +320,37 @@ header .icon-phone {
     line-height: 45px;
     color: #999999;
 }
-
 .tabs li {
     display: inline-block;
-    padding: 0 15px;
-}
+    padding: 0px 15px;
 
+}
 .info .tabContent {
     font-size: 12px;
     line-height: 18px;
     color: #333333;
 }
-
 .info .title {
     text-transform: uppercase;
     padding-left: 27px;
     position: relative;
     display: block;
 }
-
 .info .title::before {
-    content: '';
+    content: "";
     display: block;
-    width: 0px;
-    height: 0px;
+    width: 0;
+    height: 0;
     border-top: 5px solid #333333;
     border-left: 4px solid transparent;
     border-right: 4px solid transparent;
     position: absolute;
     left: 0;
     top: 50%;
-    margin-top: -3px;
+    margin-top: -2px;
     transition: all 0.3s;
 }
-
-.info .title.active::before {
+.info .title.activ::before {
     transform: rotate(180deg);
 }
 
@@ -441,45 +359,31 @@ footer {
     line-height: 22px;
     color: #ffffff;
     background-color: #64ba4a;
-
 }
-
-footer .copyright span {
-    display: block;
-}
-
 footer a {
     text-decoration: none;
     color: #ffffff;
 }
-
-footer .soclincs a {
+footer .socLinks a {
     font-size: 21px;
-    padding: 0 5px;
 }
-
-.footmenu {
+.footMenu {
     width: 50%;
     float: left;
 }
-
-.footmenu > li {
+.footMenu>li {
     width: 50%;
     float: left;
 }
-
 .footContacts {
     width: 25%;
     float: left;
 }
-
 .copyright {
     width: 25%;
     float: left;
-    padding-left: 70px;
-    text-align: right;
 }
-
+/*Корпоративным клиентам*/
 /*CorpClients*/
 
 header .menu  .corp {
@@ -704,7 +608,7 @@ header .menu  .corp {
 }
 
 .product > div {
-margin-top: 30px;
+    margin-top: 30px;
 }
 
 .product > div:first-child {
@@ -745,11 +649,9 @@ margin-top: 30px;
     vertical-align: middle;
     margin-bottom: 80px;
 }
-
-/*news*/
-
-.content .bredcrumbs li,
-.content .bredcrumbs li a {
+/*Новости подробно*/
+.content .breadcrumbs li,
+.content .breadcrumbs li a {
     font-size: 12px;
     line-height: 22px;
     text-decoration: none;
@@ -787,68 +689,80 @@ margin-top: 30px;
     line-height: 22px;
     color: #0069b4;
 }
-
-/*order*/
-
-.content .breadcrumbs li,
-.content .breadcrumbs li a {
-    font-size: 12px;
-    line-height: 22px;
-    text-decoration: none;
-    color: #999999;
-}
-
 .orderList li {
     padding-left: 40px;
 }
-
 .orderList label {
     position: relative;
     padding-left: 40px;
     margin-left: -40px;
 }
-
 .radioBtn {
     display: none;
 }
-
 .radioBtn:not(checked) + label::before {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     width: 22px;
     height: 22px;
     border: 2px solid #d4d4d4;
     border-radius: 50%;
     transition: all 0.3s;
 }
-
 .radioBtn:not(checked) + label::after {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     top: 7px;
     left: 7px;
     width: 8px;
     height: 8px;
-    background-color: #51bf87;
+    background: #51df87;
     border-radius: 50%;
     opacity: 0;
     transition: all 0.3s;
 }
-
 .radioBtn:checked + label::before {
-    border-color: #51bf87;
+    border-color: #51df87;
 }
-
 .radioBtn:checked + label::after {
     opacity: 1;
 }
-
 .radioBtn + label {
     cursor: pointer;
+}
+.content .breadcrumbs li,
+.content .breadcrumbs li a {
+    font-size: 12px;
+    line-height: 22px;
+    text-decoration: none;
+    color: #999999;
+    display: inline-block;
+}
+
+.content .breadcrumbs li + li {
+    margin-left: 3px;
+}
+
+.content {
+    position: relative;
+}
+
+.ofor::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 100%;
+    width: 0;
+    height: 0;
+    border-top: 7px solid #00a48c;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    margin-bottom: -138px;
+    margin-left: 268px;
 }
 
 .container .checkout h1 {
@@ -856,16 +770,24 @@ margin-top: 30px;
     line-height: 22px;
     font-weight: 600;
     color: #333333;
+    padding: 24px 0px;
+}
+
+.citySelection {
+    border-bottom: 1px solid #e4e4e4;
+    padding-bottom: 26px;
 }
 
 .content .citySelection label {
     font-size: 13px;
+    display: block;
     line-height: 22px;
     color: #666666;
     font-style: italic;
+    padding-bottom: 6px;
 }
 
-.content .citySelection select* {
+.content .citySelection select * {
     font-size: 13px;
     line-height: 22px;
     color: #666666;
@@ -876,22 +798,37 @@ margin-top: 30px;
     line-height: 22px;
     font-weight: 600;
     color: #333333;
+    margin: 22px 0px 26px;
 }
 
-.delivery ul li label* {
+.delivery ul li label * {
     font-size: 13px;
     line-height: 19px;
     color: #333333;
+}
+
+.delivery .orderList {
+    border-bottom: 1px solid #e4e4e4;
 }
 
 .delivery ul p {
     font-size: 12px;
     line-height: 18px;
     color: #666666;
+    padding-bottom: 23px;
 }
 
 .delivery ul .orange {
     color: #f26522;
+    margin-top: -24px;
+}
+
+.delivery label {
+    font-size: 13px;
+    line-height: 19px;
+    color: #333333;
+    font-style: normal;
+    font-weight: 600;
 }
 
 .content .deliveryAddress label {
@@ -899,10 +836,23 @@ margin-top: 30px;
     line-height: 22px;
     color: #666666;
     font-style: italic;
+    display: block;
+    padding-bottom: 5px;
 }
 
 .content .deliveryAddress span {
     color: #ed1c24;
+}
+
+.deliveryAddress {
+    border-bottom: 1px solid #e4e4e4;
+    padding-bottom: 23px;
+}
+
+.deliveryAddress .message {
+    display: block;
+    float: left;
+    margin-bottom: 50px;
 }
 
 .content .paymentMeth label {
@@ -910,19 +860,33 @@ margin-top: 30px;
     line-height: 19px;
     color: #333333;
     font-style: normal;
+    font-weight: 600;
 }
 
 .content .paymentMeth p {
     font-size: 12px;
     line-height: 18px;
     color: #666666;
+    padding-top: 9px;
 }
 
-.content .yourDate label{
+.paymentMeth {
+    border-bottom: 1px solid #e4e4e4;
+    padding-bottom: 21px;
+
+}
+
+.yourDate {
+    padding-top: 20px;
+}
+
+.content .yourDate label {
     font-size: 13px;
     line-height: 22px;
     color: #666666;
     font-style: italic;
+    display: block;
+    padding-top: 15px;
 }
 
 .content .yourDate span {
@@ -937,5 +901,82 @@ margin-top: 30px;
     width: 185px;
     background-color: #ea5b0c;
     border: none;
+    margin-top: 34px;
+    margin-bottom: 67px;
 }
 
+.content .checkout .citySelection select {
+    width: 285px;
+    height: 25px;
+}
+
+.deliveryAddress input {
+    width: 288px;
+    height: 25px;
+}
+
+.numHouse div + div {
+    margin-left: 34px;
+}
+
+.deliveryAddress .numHouse {
+    width: 290px;
+    float: left;
+}
+
+.deliveryAddress .numHouse div:first-child {
+    float: left;
+}
+
+.deliveryAddress .numHouse div:nth-child(2) {
+    float: left;
+}
+
+.deliveryAddress .numHouse div:last-child {
+    float: left;
+}
+
+.numHouse div:first-child input {
+    width: 58px;
+}
+
+.numHouse div:nth-child(2) input {
+    width: 58px;
+}
+
+.numHouse div:last-child input {
+    width: 100px;
+}
+.content .yourDate input {
+    width: 288px;
+    height: 25px;
+}
+
+.content .news h1 {
+    padding: 25px 0px 50px;
+}
+
+.content .news h2 {
+    margin: 0;
+}
+
+.content .newsImg {
+    background-color: #b3b3b3;
+    width: 100%;
+    height: 205px;
+    margin: 20px 0;
+}
+
+.newsContent p + p {
+    padding-top: 30px;
+}
+
+.news .moreNews {
+    display: inline-block;
+    margin: 40px 0;
+}
+
+.deliveryAddress textarea {
+    width: 285px;
+    height: 100px;
+}

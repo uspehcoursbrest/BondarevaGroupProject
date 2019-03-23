@@ -10,49 +10,55 @@
 <body>
 <header>
     <div class="container">
-        <div class="left">
-            <a href="#" class="login"><span class="icon-user"></span>Войти в личный кабинет</a>
-            <ul class="menu">
-                <li><a href="#">Оптовикам</a></li>
-                <li><a href="#">Корпоративным клиентам</a></li>
-                <li><a href="#">Доставка и оплата</a></li>
-                <li><a href="#">О мастерской</a></li>
-                <li><a href="#">Контакты</a></li>
-            </ul>
-        </div>
-        <div class="logo">
-            <a href="#">
+        <div class="headWrap">
+            <div class="left">
+                <a href="#" class="login"><span class="icon-user"></span>Войти в личный кабинет</a>
+                <ul class="menu">
+                    <li><a href="#">Оптовикам</a></li>
+                    <li><a href="#">Корпоративным клиентам</a></li>
+                    <li><a href="#">Доставка и оплата</a></li>
+                    <li><a href="#">О мастерской</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="logo invisLink">
                 <img src="img/png/logo.png" alt="logo">
-            </a>
-        </div>
-        <div class="right">
-            <a href="#" class="phone"><span class="icon-phone"></span>8 (495) 648-8-456</a>
-            <a href="#" class="callback">Не дозвонились?</a>
-            <p class="timing">Мы работаем пн-пт 10:00 - 19:00</p>
-            <a href="#" class="basket" style="background-image: url(img/png/basket.png)">товаров<span>5</span>на
-                сумму<span>2550 ₽</span></a>
+                <a href="#">Главная страница</a>
+            </div>
+            <div class="right">
+                <a href="#" class="phone"><span class="icon-phone"></span>8 (495) 648-8-456</a>
+                <a href="#" class="calBack">Не дозвонились?</a>
+                <p class="timing">Мы работаем пн-пт 10:00 - 19:00</p>
+                <a href="#" class="basked" style="background-image: url(img/png/basket.png)">товаров <span>5</span> на
+                    сумму
+                    <span>2550 ₽</span></a>
+            </div>
         </div>
     </div>
 </header>
 <div class="container">
     <div class="content">
         <ul class="breadcrumbs">
-            <li><a href="#"></a>Главная</li>
-            <li><a href="#"></a>Корзина</li>
+            <li><a href="#">Главная</a></li>
+            <li>/</li>
+            <li><a href="#">Корзина</a></li>
+            <li>/</li>
             <li>Оформление заказа</li>
         </ul>
         <div class="checkout">
-            <h1>Оформление заказа</h1>
-            <div class="citySelection">
-                <label for="choiceTown">Выбор города<span></span></label>
-                <select name="choiceTown" id="choiceTown">
-                    <option value="Москва, Московская обл., Россия">Москва, Московская обл., Россия</option>
-                    <option value="Санкт-Петербург, Ленинградская обл., Россия">Санкт-Петербург, Ленинградская
-                        обл.,
-                        Россия
-                    </option>
-                    <option value="Рязань, Рязанская обл., Россия">Рязань, Рязанская обл., Россия</option>
-                </select>
+            <div class="ofor">
+                <h1>Оформление заказа</h1>
+                <div class="citySelection">
+                    <label for="choiceTown">Выбор города<span></span></label>
+                    <select name="choiceTown" id="choiceTown">
+                        <option value="Москва, Московская обл., Россия">Москва, Московская обл., Россия</option>
+                        <option value="Санкт-Петербург, Ленинградская обл., Россия">Санкт-Петербург, Ленинградская
+                            обл.,
+                            Россия
+                        </option>
+                        <option value="Рязань, Рязанская обл., Россия">Рязань, Рязанская обл., Россия</option>
+                    </select>
+                </div>
             </div>
             <div class="delivery">
                 <h2>Способ доставки</h2>
@@ -96,19 +102,21 @@
                         <label for="region">Район<span>*</span></label>
                         <input type="text" name="region" id="region">
                     </div>
-                    <div>
-                        <label for="house">Дом<span>*</span></label>
-                        <input type="text" name="house" id="house">
+                    <div class="numHouse">
+                        <div>
+                            <label for="house">Дом<span>*</span></label>
+                            <input type="text" name="house" id="house">
+                        </div>
+                        <div>
+                            <label for="housing">Корпус<span>*</span></label>
+                            <input type="text" name="housing" id="housing">
+                        </div>
+                        <div>
+                            <label for="apartment">Квартира/Офис<span>*</span></label>
+                            <input type="text" name="apartment" id="apartment">
+                        </div>
                     </div>
-                    <div>
-                        <label for="housing">Корпус<span>*</span></label>
-                        <input type="text" name="housing" id="housing">
-                    </div>
-                    <div>
-                        <label for="apartment">Квартира/Офис<span>*</span></label>
-                        <input type="text" name="apartment" id="apartment">
-                    </div>
-                    <div>
+                    <div><br><br><br>
                         <label for="message">Дополнительно (номер домофона, номер офиса и тд.)</label>
                         <textarea name="message" id="message"></textarea>
                     </div>
@@ -154,38 +162,40 @@
 </div>
 <footer>
     <div class="container">
-        <ul class="footMenu">
-            <li>
-                <ul>
-                    <li><a href="#">Оптовикам</a></li>
-                    <li><a href="#">Корпоративным клиентам</a></li>
-                    <li><a href="#">Войти в личный кабинет</a></li>
-                </ul>
-            </li>
-            <li>
-                <ul>
-                    <li><a href="#">Доставка и оплата</a></li>
-                    <li><a href="#">О мастерской</a></li>
-                    <li><a href="#">Контакты</a></li>
-                </ul>
-            </li>
-        </ul>
-        <div class="footContacts">
-            <a href="#">8 (945) 648-8-456</a>
-            <a href="#">ecocheloveki@gmail.com</a>
-            <span>пн-пт 10:00 - 19:00</span>
-            <div class="socLinks">
-                <span>Ищите нас здесь</span>
-                <a href="#"></a>
-                <a href="#"></a>
-                <a href="#"></a>
+        <div class="clear">
+            <ul class="footMenu clear">
+                <li>
+                    <ul>
+                        <li><a href="#">Оптовикам</a></li>
+                        <li><a href="#">Корпоративным клиентам</a></li>
+                        <li><a href="#">Войти в личный кабинет</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li><a href="#">Доставка и оплата</a></li>
+                        <li><a href="#">О мастерской</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="footContacts">
+                <a href="#">8 (945) 648-8-456</a>
+                <a href="#">ecocheloveki@gmail.com</a>
+                <span>пн-пт 10:00 - 19:00</span>
+                <div class="socLinks">
+                    <span>Ищите нас здесь</span>
+                    <a href="#" class="icon-soc1"></a>
+                    <a href="#" class="icon-soc2"></a>
+                    <a href="#" class="icon-soc3"></a>
+                </div>
             </div>
-        </div>
-        <div class="copyright">
-            <span>© 2011-2014 Экочеловечки</span>
-            <span>Все права защищены</span>
-            <span>Все цены указаны в рублях</span>
-            <span>Разработка<a href="#">«Биат»</a></span>
+            <div class="copyright">
+                <span>© 2011-2014 Экочеловечки</span>
+                <span>Все права защищены</span>
+                <span>Все цены указаны в рублях</span>
+                <span>Разработка<a href="#">«Биат»</a></span>
+            </div>
         </div>
     </div>
 </footer>
