@@ -11,26 +11,28 @@
 <body>
 <header>
     <div class="container">
-        <div class="left">
-            <a href="#" class="login"><span class="icon-user"></span>Войти в личный кабинет</a>
-            <ul class="menu">
-                <li><a href="#">Оптовикам</a></li>
-                <li><a href="#">Корпоративным клиентам</a></li>
-                <li><a href="#">Доставка и оплата</a></li>
-                <li><a href="#">О мастерской</a></li>
-                <li><a href="#">Контакты </a></li>
-            </ul>
-        </div>
-        <div class="logo">
-            <a href="#">
+        <div class="headWrap">
+            <div class="left">
+                <a href="#" class="login"><span class="icon-user"></span>Войти в личный кабинет</a>
+                <ul class="menu">
+                    <li><a href="#">Оптовикам</a></li>
+                    <li><a href="#">Корпоративным клиентам</a></li>
+                    <li><a href="#">Доставка и оплата</a></li>
+                    <li><a href="#">О мастерской</a></li>
+                    <li><a href="#">Контакты </a></li>
+                </ul>
+            </div>
+            <div class="logo invisLink">
                 <img src="img/png/logo.png" alt="logo">
-            </a>
-        </div>
-        <div class="right">
-            <a href="#" class="phone"> <span class="icon-phone"></span> 8 (495) 648-8-456</a>
-            <a href="#" class="callback">Не дозвонились?</a>
-            <p class="timing">Мы работаем пн-пт 10:00 - 19:00</p>
-            <a href="#" class="basket" style="background-image: url(img/png/basket.png)">товаров <span>5</span> на сумму <span>2550 ₽</span></a>
+                <a href="#">Главная страница</a>
+            </div>
+            <div class="right">
+                <a href="#" class="phone"> <span class="icon-phone"></span> 8 (495) 648-8-456</a>
+                <a href="#" class="callback">Не дозвонились?</a>
+                <p class="timing">Мы работаем пн-пт 10:00 - 19:00</p>
+                <a href="#" class="basket" style="background-image: url(img/png/basket.png)">товаров <span>5</span> на
+                    сумму <span>2550 ₽</span></a>
+            </div>
         </div>
     </div>
 </header>
@@ -40,7 +42,7 @@
             <a href="#">Главная</a>
             <span>/Корпоративным клиентам</span>
         </div>
-        <div class="corpClients">
+        <div class="corpClients clear">
             <div class="form">
                 <span>Для расчета заказа заполните форму ниже, или позвоните нам 8 (495) 648-8-456</span>
                 <form action="#">
@@ -56,17 +58,21 @@
                         <label for="phone">Номер телефона</label>
                         <input type="text" name="phone" id="phone">
                     </div>
-                    <div class="logo">
-                        <label>Нанесение логотипа</label>
-                        <span>занимает 20 рабочих дней</span>
+                    <div class="logo clear">
+                        <div>
+                            <label>Нанесение логотипа</label>
+                           <span>занимает 20 рабочих дней</span>
+                        </div>
                         <ul>
-                            <li>
+                            <li class="clear">
+                                <input type="radio" name="logo" id="logoYes" class="radBtn">
                                 <label for="logoYes">Да</label>
-                                <input type="radio" name="logoYes" id="logoYes">
+
                             </li>
-                            <li>
+                            <li class="clear">
+                                <input type="radio" name="logo" id="logoNo" class="radBtn">
                                 <label for="logoNo">Нет</label>
-                                <input type="radio" name="logoNo" id="logoNo">
+
                             </li>
                         </ul>
                     </div>
@@ -83,9 +89,10 @@
                             <option value="150">150</option>
                         </select>
                     </div>
-                    <div class="date">
+                    <div class="date clear">
                         <label for="date">Подготовить заказ к</label>
                         <input type="date" id="date">
+                        <span style="background-image:url(img/png/date.png);"></span>
                     </div>
                     <div class="info">
                         <label for="message">Дополнительная информация</label>
@@ -136,7 +143,7 @@
             </ul>
             <div class="footContacts">
                 <a href="#">8 (945) 648-8-456</a>
-                <a href="#">ecocheloveki@gmail.com пн-пт 10:00 - 19:00</a>
+                <a href="#">ecocheloveki@gmail.com <br> пн-пт 10:00 - 19:00</a>
                 <div class="soclincs">
                     <span>Ищите нас здесь</span>
                     <a href="#" class="icon-soc1"></a>

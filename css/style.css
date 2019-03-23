@@ -1,5 +1,8 @@
-* {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
+
 }
 
 body {
@@ -29,12 +32,34 @@ ul {
     clear: both;
 }
 
+.invisLink {
+    position: relative;
+    z-index: 1;
+}
+
+.invisLink > a {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 7;
+    overflow: hidden;
+    text-indent: 200%;
+    white-space: nowrap;
+}
+
+header {
+    padding-top: 27px;
+}
+
 .headWrap {
     display: table;
     width: 100%;
 }
 
-.headWrap div {
+.headWrap > div {
     display: table-cell;
     width: 33.3333%;
     vertical-align: top;
@@ -47,6 +72,7 @@ ul {
 .headWrap .right {
     text-align: right;
 }
+
 
 header .login{
     font-size: 13px;
@@ -115,9 +141,21 @@ header .icon-phone {
     font-size: 20px;
 }
 
+
 .banner {
-    display: table;
+    display: flex;
     justify-content: space-between;
+    margin-top: 30px;
+}
+
+.banner .sale {
+    width: 305px;
+    height: 360px;
+}
+
+.banner .slider {
+    width: 640px;
+    height: 360px;
 }
 
 .content .sale {
@@ -154,11 +192,6 @@ header .icon-phone {
     float: left;
 }
 
-.subscribe .wrap {
-    display: table;
-    width: 100%;
-}
-
 .subscribe {
     background-color: #64ba4a;
     width: 320px;
@@ -189,8 +222,7 @@ header .icon-phone {
     width: 185px;
     background-color: #259c47;
     display: table-cell;
-    vertical-align: middle;\
-    width:188px;
+    vertical-align:  middle;
 }
 
 .subscribe .wrap span {
@@ -199,6 +231,11 @@ header .icon-phone {
     display: table-cell;
     vertical-align: middle;
     padding-left: 25px;
+}
+
+.subscribe .wrap {
+    display: table;
+    width: 100%;
 }
 
 .advSub + .catalog {
@@ -222,8 +259,15 @@ header .icon-phone {
     margin-top: 30px;
 }
 
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+}
+
 .card {
     position: relative;
+    border-bottom: 1px solid #e4e4e4;
 }
 
 .status {
@@ -238,7 +282,7 @@ header .icon-phone {
 }
 
 .status.hit {
-    background-color:#6ddecc;
+    background-color: #6eddcc;
 }
 
 .status.discount {
@@ -246,23 +290,37 @@ header .icon-phone {
 }
 
 .status.new {
-    background-color: #ffed03 ;
+    background-color: #78ec71;
+}
+
+.card .content {
+    position: relative;
+    min-height: 110px;
+    padding-top: 15px;
+}
+
+.card .content .buy {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    bottom: 10px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .card .title {
     font-size: 15px;
     line-height: 22px;
     color: #333333;
+    display: block;
 }
 
 .card .img {
-    width: 220px;
     height: 220px;
     -webkit-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-
 }
 
 .card .small {
@@ -302,9 +360,10 @@ header .icon-phone {
     border: none;
 }
 
-.widgets .wrapper{
+.widgets .wrapper {
     display: flex;
     justify-content: space-between;
+
 }
 
 .widgets h1 {
@@ -353,6 +412,28 @@ header .icon-phone {
 
 .info .title {
     text-transform: uppercase;
+    padding-left: 27px;
+    position: relative;
+    display: block;
+}
+
+.info .title::before {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 0px;
+    border-top: 5px solid #333333;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -3px;
+    transition: all 0.3s;
+}
+
+.info .title.active::before {
+    transform: rotate(180deg);
 }
 
 footer {
@@ -360,6 +441,11 @@ footer {
     line-height: 22px;
     color: #ffffff;
     background-color: #64ba4a;
+
+}
+
+footer .copyright span {
+    display: block;
 }
 
 footer a {
@@ -369,6 +455,7 @@ footer a {
 
 footer .soclincs a {
     font-size: 21px;
+    padding: 0 5px;
 }
 
 .footmenu {
@@ -389,7 +476,11 @@ footer .soclincs a {
 .copyright {
     width: 25%;
     float: left;
+    padding-left: 70px;
+    text-align: right;
 }
+
+/*CorpClients*/
 
 header .menu  .corp {
     color: #ff7200;
@@ -399,6 +490,7 @@ header .menu  .corp {
     font-size: 12px;
     line-height: 22px;
     color: #999999;
+    padding-top: 20px;
 }
 
 .content .caption a {
@@ -406,14 +498,33 @@ header .menu  .corp {
     color: #999999;
 }
 
-.corpClients .form>span {
+.corpClients .form > span {
     font-size: 13px;
     line-height: 22px;
     color: #333333;
+    margin-top: 25px;
+    display: block;
 }
 
 .corpClients form {
     background-color: #f9f9f9;
+    margin-top: 22px;
+    padding: 20px 10px;
+}
+
+.corpClients .form {
+    float: left;
+    width: 300px;
+}
+
+.corpClients .product {
+    float: right;
+    width: 635px;
+    padding-right: 15px;
+}
+
+.corpClients form div + div {
+    padding-top: 10px;
 }
 
 .corpClients form label {
@@ -421,18 +532,48 @@ header .menu  .corp {
     line-height: 22px;
     font-style: italic;
     color: #666666;
+    display: block;
 }
 
-.corpClients .logo>label {
+.corpClients form .nameOrg input,
+.corpClients form .contact input,
+.corpClients form .phone input {
+    display: block;
+    width: 282px;
+    height: 30px;
+    border: 1px solid #d6d6d6;
+}
+
+.corpClients .logo > div label {
     font-size: 13px;
     line-height: normal;
     font-style: normal;
     color: #333333;
+
 }
 
 .corpClients .logo span {
     font-size: 11px;
     color: #999999;
+    display: block;
+}
+
+.corpClients .logo > div {
+    float: left;
+    width: 150px;
+}
+
+.corpClients .logo ul {
+    float: right;
+    display: block;
+    vertical-align: top;
+    width: 108px;
+}
+
+.corpClients .logo li {
+    display: inline-block;
+    text-align: right;
+    padding-right: 30px;
 }
 
 .corpClients .logo li label {
@@ -440,6 +581,61 @@ header .menu  .corp {
     line-height: 22px;
     font-style: normal;
     color: #666666;
+    padding-right: 30px;
+    position: relative;
+    margin-right: -30px;
+
+}
+
+.radBtn {
+    display: none;
+}
+
+.radBtn:not(checked) + label::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 25px;
+    width: 22px;
+    height: 22px;
+    border: 2px solid #d4d4d4;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.radBtn:not(checked) + label::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 7px;
+    left: 32px;
+    width: 8px;
+    height: 8px;
+    background-color: #51bf87;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.radBtn:checked + label::before {
+    border-color: #51bf87;
+}
+
+.radBtn:checked + label::after {
+    opacity: 1;
+}
+
+.radBtn + label {
+    cursor: pointer;
+}
+
+.logo li * {
+    float: left;
+}
+
+.corpClients .input input {
+    display: none;
 }
 
 .corpClients .input label {
@@ -453,6 +649,14 @@ header .menu  .corp {
 .corpClients .input span {
     font-size: 13px;
     color: #999999;
+    display: block;
+}
+
+.corpClients .figure select {
+    display: block;
+    height: 30px;
+    width: 85px;
+    border: 1px solid #d6d6d6;
 }
 
 .corpClients .figure option {
@@ -463,21 +667,48 @@ header .menu  .corp {
 
 .corpClients .date input {
     font-size: 13px;
-    line-height: 22px;
+    line-height: 30px;
     color: #333333;
+    display: block;
+    float: left;
+    width: 107px;
+    border: 1px solid #d6d6d6;
+}
+
+.corpClients .date span {
+    width: 20px;
+    height: 17px;
+    color: #51bf87;
+    margin-left: 10px;
+    margin-top: 7px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    float: left;
 }
 
 .corpClients .info textarea {
     width: 280px;
     height: 125px;
+    border: 1px solid #d6d6d6;
 }
 
 .corpClients form button {
     font-size: 14px;
-    line-height: 22px;
+    line-height: 33px;
     color: #ffffff;
     background-color: #ff7200;
     border: none;
+    margin-top: 20px;
+    width: 130px;
+
+}
+
+.product > div {
+margin-top: 30px;
+}
+
+.product > div:first-child {
+    margin-top: 25px;
 }
 
 .product span {
@@ -489,17 +720,33 @@ header .menu  .corp {
 
 .product p {
     font-size: 13px;
-    line-height: 30px;
+    line-height: 19px;
     color: #333333;
+}
+
+.product > div p:nth-child(2) {
+    padding-top: 20px
+}
+
+.product p:last-child {
+    padding-top: 35px;
 }
 
 .product a {
     font-size: 14px;
-    line-height: 22px;
+    line-height: 33px;
+    width: 190px;
     color: #ffffff;
     background-color: #64ba4a;
     text-decoration: none;
+    margin-top: 25px;
+    display: block;
+    text-align: center;
+    vertical-align: middle;
+    margin-bottom: 80px;
 }
+
+/*news*/
 
 .content .bredcrumbs li,
 .content .bredcrumbs li a {
@@ -541,12 +788,67 @@ header .menu  .corp {
     color: #0069b4;
 }
 
+/*order*/
+
 .content .breadcrumbs li,
 .content .breadcrumbs li a {
     font-size: 12px;
     line-height: 22px;
     text-decoration: none;
     color: #999999;
+}
+
+.orderList li {
+    padding-left: 40px;
+}
+
+.orderList label {
+    position: relative;
+    padding-left: 40px;
+    margin-left: -40px;
+}
+
+.radioBtn {
+    display: none;
+}
+
+.radioBtn:not(checked) + label::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 22px;
+    height: 22px;
+    border: 2px solid #d4d4d4;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.radioBtn:not(checked) + label::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    width: 8px;
+    height: 8px;
+    background-color: #51bf87;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.radioBtn:checked + label::before {
+    border-color: #51bf87;
+}
+
+.radioBtn:checked + label::after {
+    opacity: 1;
+}
+
+.radioBtn + label {
+    cursor: pointer;
 }
 
 .container .checkout h1 {
